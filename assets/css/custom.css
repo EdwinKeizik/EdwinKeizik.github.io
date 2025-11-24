@@ -1,0 +1,510 @@
+/* Pakeistas šriftų šeimos pasirinkimas, kad labiau skirtųsi nuo buvusio */
+
+/* Pagrindinis svetainės šriftas – Montserrat */
+body, html {
+  font-family: 'Montserrat', 'Tahoma', 'Geneva', sans-serif;
+  background: #181c2f; /* tamsiai mėlynas fonas */
+  color: #e6e6e6;
+}
+
+/* Antraštėms – Playfair Display */
+h1, h2, h3, h4, h5, h6, .section-title, .sitename {
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+/* Navigacijai ir mygtukams – Fira Mono */
+.navmenu, .btn-primary, .btn-secondary, .profile-card, .skills-list {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+/* --- ANTRAŠTĖS (h1-h6) – Tamsios, sodrios spalvos --- */
+h1 {
+  font-size: 3.2rem;
+  color: #b22234; /* bordo/raudona */
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #181c2f, 0 2px 8px #b2223440;
+  border-bottom: 4px double #b22234;
+  padding-bottom: 0.2em;
+  background: none;
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: #1e2a78; /* tamsiai mėlyna */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.7em;
+  text-transform: uppercase;
+  background: none;
+  border-left: 6px solid #1e2a78;
+  padding-left: 0.5em;
+}
+
+h3 {
+  font-size: 1.7rem;
+  color: #14532d; /* tamsiai žalia */
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6em;
+  text-transform: capitalize;
+  border-bottom: 2px dashed #14532d;
+  padding-bottom: 0.15em;
+  background: none;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: #b22234; /* bordo */
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5em;
+  text-transform: lowercase;
+  background: #1e2a7833; /* švelniai mėlynas fonas */
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  border-radius: 8px;
+}
+
+h5 {
+  font-size: 1.05rem;
+  color: #1e2a78;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4em;
+  font-style: italic;
+  text-decoration: underline wavy #1e2a78;
+}
+
+h6 {
+  font-size: 0.92rem;
+  color: #14532d;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3em;
+  text-transform: none;
+  background: #14532d22;
+  display: inline-block;
+  padding: 0.05em 0.4em;
+  border-radius: 4px;
+}
+
+/* --- PASRAIPOS (p) – Tamsus tekstas, švelnus fonas --- */
+p {
+  font-family: 'Montserrat', 'Tahoma', 'Geneva', sans-serif;
+  font-size: 1.08rem;
+  color: #e6e6e6;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.1em;
+  background: #23294d; /* tamsiai mėlynas, bet šviesesnis už body */
+  padding: 0.6em 1.2em;
+  border-left: 4px solid #b22234;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0 2px 8px #1e2a7840;
+}
+
+
+/* --- MYGTUKAI (button, .btn) --- */
+button,
+.btn,
+input[type="button"],
+input[type="submit"] {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  background: linear-gradient(90deg, #1e2a78 60%, #14532d 100%);
+  color: #fff;
+  border: 2px solid #b22234;
+  border-radius: 30px;
+  padding: 0.6em 2em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 16px #1e2a7833;
+  transition: 
+    background 0.3s,
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.15s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover,
+.btn:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background: linear-gradient(90deg, #b22234 60%, #1e2a78 100%);
+  color: #fffbe7;
+  border-color: #14532d;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 24px #b2223440;
+}
+
+button:active,
+.btn:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+  background: #14532d;
+  color: #fff;
+  border-color: #1e2a78;
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px #1e2a7840;
+}
+
+/* --- NUORODOS (a) --- */
+a {
+  color: #b22234;
+  text-decoration: underline dotted #1e2a78 2px;
+  font-weight: 600;
+  transition: color 0.2s, text-decoration-color 0.2s, background 0.2s;
+  background: transparent;
+  padding: 0 0.1em;
+  border-radius: 4px;
+}
+
+a:hover,
+a:focus {
+  color: #14532d;
+  background: #1e2a7822;
+  text-decoration: underline solid #14532d 2px;
+}
+
+a:active {
+  color: #fff;
+  background: #b22234;
+  text-decoration: none;
+}
+
+/* ...existing code... */
+
+/* --- Sekcijų (apie, reziumė, portfolio, services) bendri tarpai ir blokų stilius --- */
+#about.section,
+#resume.section,
+#portfolio.section,
+#services.section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  margin-bottom: 32px;
+  margin-top: 0;
+  background: #20264a;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #1e2a7833;
+  border: 2px solid #1e2a78;
+}
+
+/* Sekcijų vidinių blokų (pvz., .container ar .section-title) stilius */
+#about .container,
+#about .section-title,
+#resume .container,
+#resume .section-title,
+#portfolio .container,
+#portfolio .section-title,
+#services .container,
+#services .section-title {
+  margin-bottom: 28px;
+  padding: 32px 28px;
+  background: #23294d;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #14532d33;
+  border: 1.5px solid #14532d;
+}
+
+/* Paskutiniam blokui sekcijoje – mažesnis tarpas */
+#about .container:last-child,
+#resume .container:last-child,
+#portfolio .container:last-child,
+#services .container:last-child {
+  margin-bottom: 0;
+}
+
+/* Tarpai tarp elementų sekcijose */
+#about .container > *:not(:last-child),
+#resume .container > *:not(:last-child),
+#portfolio .container > *:not(:last-child),
+#services .container > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* --- NAVIGACIJOS JUOSTA (NAVBAR) --- */
+#header {
+  background: linear-gradient(90deg, #181c2f 80%, #1e2a78 100%);
+  border-bottom: 3px solid #b22234;
+  box-shadow: 0 4px 24px #1e2a7840;
+  transition: background 0.3s;
+}
+
+#header .logo h1.sitename {
+  color: #b22234;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  letter-spacing: 0.08em;
+  text-shadow: 1px 1px 0 #181c2f;
+}
+
+#navmenu ul li a {
+  color: #e6e6e6;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.7em 1.2em;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s;
+}
+
+#navmenu ul li a.active,
+#navmenu ul li a:hover,
+#navmenu ul li a:focus {
+  background: #b22234;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --- PROGRESO JUOSTOS (Progress Bar) --- */
+.progress {
+  background: #23294d;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #1e2a7833;
+  height: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #1e2a78 60%, #14532d 100%);
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 2px 8px #14532d44;
+  height: 100%;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* --- "Į VIRŠŲ" MYGTUKAS --- */
+#scroll-top {
+  background: #1e2a78;
+  color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 4px 16px #1e2a7840;
+  border: 2px solid #b22234;
+  font-size: 2rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+#scroll-top:hover, #scroll-top:focus {
+  background: #b22234;
+  color: #fffbe7;
+  border-color: #1e2a78;
+  transform: scale(1.08);
+}
+
+/* --- Numeruotas sąrašas (ol) su skaitikliais --- */
+ol.custom-counter {
+  counter-reset: custom-ol;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ol.custom-counter > li {
+  counter-increment: custom-ol;
+  position: relative;
+  margin-bottom: 1em;
+  padding-left: 2.5em;
+  background: #23294d;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #1e2a7840;
+  min-height: 2.2em;
+}
+
+ol.custom-counter > li::before {
+  content: counter(custom-ol) ".";
+  position: absolute;
+  left: 0.8em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #b22234;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.6em;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #b2223440;
+}
+
+/* Įdėtas sąrašas ol.custom-counter > li > ol */
+ol.custom-counter ol {
+  counter-reset: nested-ol;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 1.5em;
+  padding-left: 0;
+}
+
+ol.custom-counter ol > li {
+  counter-increment: nested-ol;
+  background: #1e2a78;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+  padding-left: 2.2em;
+  position: relative;
+}
+
+ol.custom-counter ol > li::before {
+  content: counter(nested-ol, lower-alpha) ")";
+  position: absolute;
+  left: 0.7em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #14532d;
+  color: #fff;
+  font-weight: bold;
+  width: 1.3em;
+  height: 1.3em;
+  line-height: 1.3em;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1em;
+}
+
+/* --- Nenumeruotas sąrašas (ul) su pseudo-elementais --- */
+ul.custom-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ul.custom-list > li {
+  position: relative;
+  margin-bottom: 1em;
+  padding-left: 2.2em;
+  background: #23294d;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #14532d40;
+  min-height: 2em;
+}
+
+ul.custom-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0.8em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.1em;
+  height: 1.1em;
+  background: radial-gradient(circle at 40% 40%, #1e2a78 60%, #b22234 100%);
+  border-radius: 50%;
+  border: 2px solid #14532d;
+  box-shadow: 0 1px 4px #1e2a7840;
+}
+
+/* Įdėtas sąrašas ul.custom-list > li > ul */
+ul.custom-list ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 1.5em;
+  padding-left: 0;
+}
+
+ul.custom-list ul > li {
+  background: #1e2a78;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.5em;
+  padding-left: 2em;
+  position: relative;
+}
+
+ul.custom-list ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0.7em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.7em;
+  height: 0.7em;
+  background: #b22234;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+}
+
+/* Papildomai: kad tekstas būtų aiškus */
+ol.custom-counter > li,
+ul.custom-list > li {
+  color: #e6e6e6;
+}
+
+/* --- Paslaugų lentelės stilius --- */
+.services-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto 2em auto;
+  background: #23294d;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px #1e2a7840;
+}
+
+.services-table th, .services-table td {
+  padding: 1em 0.8em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.services-table th {
+  background: #1e2a78;
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  border-bottom: 3px solid #b22234;
+  text-transform: uppercase;
+}
+
+.services-table tbody tr {
+  background: #23294d;
+  color: #e6e6e6;
+  transition: background 0.2s, color 0.2s;
+}
+
+.services-table tbody tr:nth-child(even) {
+  background: #20264a;
+}
+
+.services-table tbody tr:hover {
+  background: #14532d;
+  color: #fffbe7;
+}
+
+.services-table td {
+  font-size: 1.05em;
+  border-bottom: 1px solid #1e2a78;
+}
+
+/* Lentelės apvalinimai */
+.services-table th:first-child {
+  border-top-left-radius: 18px;
+}
+.services-table th:last-child {
+  border-top-right-radius: 18px;
+}
+.services-table tr:last-child td:first-child {
+  border-bottom-left-radius: 18px;
+}
+.services-table tr:last-child td:last-child {
+  border-bottom-right-radius: 18px;
+}
