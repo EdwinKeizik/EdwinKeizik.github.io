@@ -709,3 +709,76 @@ ul.custom-list > li {
     animation: none !important;
   }
 }
+
+/* Kontaktų formos stilius */
+.custom-contact-form {
+  background: #23294d;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #1e2a7840;
+  padding: 2em 1.5em;
+  margin-top: 2em;
+}
+.custom-contact-form label {
+  color: #e6e6e6;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+.custom-contact-form input,
+.custom-contact-form .form-range {
+  background: #181c2f;
+  color: #fff;
+  border: 1.5px solid #1e2a78;
+  border-radius: 8px;
+  margin-bottom: 0.7em;
+}
+.custom-contact-form .form-range {
+  accent-color: #b22234;
+}
+.custom-contact-form button {
+  background: linear-gradient(90deg, #1e2a78 60%, #14532d 100%);
+  border: none;
+  border-radius: 30px;
+  padding: 0.6em 2em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fff;
+  transition: background 0.2s;
+}
+.custom-contact-form button:hover {
+  background: linear-gradient(90deg, #b22234 60%, #1e2a78 100%);
+  color: #fffbe7;
+}
+.form-results {
+  background: #1e2a78;
+  color: #fffbe7;
+  border-radius: 12px;
+  padding: 1.2em 1em;
+  font-size: 1.1em;
+  margin-top: 1.5em;
+  white-space: pre-line;
+}
+
+/* Sėkmingo pateikimo pop-up stilius */
+.form-success-popup {
+  display: none;
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #14532d 60%, #1e2a78 100%);
+  color: #fffbe7;
+  padding: 1em 2.5em;
+  border-radius: 24px;
+  font-size: 1.2em;
+  font-weight: 700;
+  box-shadow: 0 4px 24px #1e2a7840;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.4s, top 0.4s;
+  pointer-events: none;
+}
+.form-success-popup.show {
+  display: block;
+  opacity: 1;
+  top: 56px;
+}

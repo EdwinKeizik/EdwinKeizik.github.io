@@ -50,6 +50,7 @@
           <li><a href="#resume">Resume</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -673,6 +674,59 @@
 
     </section><!-- /Portfolio Section -->
 
+<section id="contact" class="contact section">
+  <div class="container section-title" data-aos="fade-up">
+    <span class="subtitle">Kontaktai</span>
+    <h2>Kontaktų forma</h2>
+    <p>Susisiekite su manimi užpildydami žemiau esančią formą.</p>
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <form id="contactForm" class="custom-contact-form">
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <label for="vardas" class="form-label">Vardas</label>
+          <input type="text" class="form-control" id="vardas" name="vardas" required>
+        </div>
+        <div class="col-md-6">
+          <label for="pavarde" class="form-label">Pavardė</label>
+          <input type="text" class="form-control" id="pavarde" name="pavarde" required>
+        </div>
+        <div class="col-md-6">
+          <label for="elpastas" class="form-label">El. paštas</label>
+          <input type="email" class="form-control" id="elpastas" name="elpastas" required>
+        </div>
+        <div class="col-md-6">
+          <label for="telefonas" class="form-label">Telefono numeris</label>
+          <input type="tel" class="form-control" id="telefonas" name="telefonas" required>
+        </div>
+        <div class="col-12">
+          <label for="adresas" class="form-label">Adresas</label>
+          <input type="text" class="form-control" id="adresas" name="adresas">
+        </div>
+        <div class="col-12 mt-3">
+          <label class="form-label">Kaip vertinate mano svetainės dizainą? (1-10)</label>
+          <input type="range" class="form-range" min="1" max="10" id="q1" name="q1" value="5" oninput="this.nextElementSibling.value = this.value">
+          <output>5</output>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Kaip vertinate turinio aiškumą? (1-10)</label>
+          <input type="range" class="form-range" min="1" max="10" id="q2" name="q2" value="5" oninput="this.nextElementSibling.value = this.value">
+          <output>5</output>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Kaip vertinate bendrą įspūdį? (1-10)</label>
+          <input type="range" class="form-range" min="1" max="10" id="q3" name="q3" value="5" oninput="this.nextElementSibling.value = this.value">
+          <output>5</output>
+        </div>
+        <div class="col-12 text-center mt-3">
+          <button type="submit" class="btn btn-primary">Siųsti</button>
+        </div>
+      </div>
+    </form>
+    <div id="formResults" class="form-results mt-4"></div>
+  </div>
+</section>
+
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Craftivo</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
@@ -705,6 +759,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
