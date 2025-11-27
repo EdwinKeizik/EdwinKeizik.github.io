@@ -508,3 +508,204 @@ ul.custom-list > li {
 .services-table tr:last-child td:last-child {
   border-bottom-right-radius: 18px;
 }
+
+/* Fade-in animacija sekcijoms */
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section,
+.section-title,
+.container.section-title {
+  animation: fadeInSection 1.2s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Socialinių ikonų šokinėjimo animacija */
+@keyframes socialBounce {
+  0%, 100% { transform: translateY(0);}
+  30% { transform: translateY(-8px);}
+  60% { transform: translateY(2px);}
+}
+
+.social-links a i,
+.social-connect a i {
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.social-links a:hover i,
+.social-connect a:hover i {
+  animation: socialBounce 0.7s;
+  color: #b22234;
+}
+
+/* Profilio nuotraukos atsiradimo animacija tik kai užvedama pelė */
+@keyframes profileFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7) rotate(-8deg);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+    filter: blur(0);
+  }
+}
+
+.profile-avatar img {
+  opacity: 1;
+  transition: none;
+}
+
+.profile-avatar:hover img,
+.profile-avatar:focus img {
+  animation: profileFadeIn 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* HTML: <div class="loader"></div> */
+#preloader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+  z-index: 9999999999;
+  background-color:#181c2f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #b22234, -20px 0 #1e2a78; background: #14532d;}
+    33% {box-shadow: 20px 0 #1e2a78, -20px 0 #14532d; background: #b22234;}
+    66% {box-shadow: 20px 0 #14532d, -20px 0 #b22234; background: #1e2a78;}
+    100%{box-shadow: 20px 0 #b22234, -20px 0 #1e2a78; background: #14532d;}
+}
+@media (prefers-reduced-motion: reduce) {
+  /* Išjungiamos arba supaprastinamos visos animacijos ir perėjimai */
+  .section,
+  .section-title,
+  .container.section-title,
+  .social-links a i,
+  .social-connect a i,
+  .profile-avatar img,
+  #preloader,
+  .preloader-dots span {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Animuotas gradientinis fonas Services sekcijai */
+#services.section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: none;
+}
+
+#services.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(120deg, #1e2a78 0%, #b22234 50%, #14532d 100%);
+  background-size: 200% 200%;
+  opacity: 0.85;
+  animation: servicesGradientMove 8s ease-in-out infinite alternate;
+  border-radius: 24px;
+}
+
+@keyframes servicesGradientMove {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(1) blur(0px);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1.08) blur(2px);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(1) blur(0px);
+  }
+}
+
+/* Kad turinys būtų virš gradientinio fono */
+#services.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animacinės figūros About sekcijoje */
+.about-shapes {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+.shape {
+  position: absolute;
+  opacity: 0.25;
+  filter: blur(0.5px);
+}
+.shape-circle {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: #b22234;
+  top: 40px; left: 40px;
+  animation: aboutCircleAnim 7s linear infinite alternate;
+}
+.shape-triangle {
+  width: 0; height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 90px solid #1e2a78;
+  top: 120px; right: 80px;
+  animation: aboutTriangleAnim 9s ease-in-out infinite alternate;
+}
+.shape-square {
+  width: 60px; height: 60px;
+  background: #14532d;
+  border-radius: 18px;
+  bottom: 400px; left: 10%;
+  animation: aboutSquareAnim 6s cubic-bezier(0.4,0,0.2,1) infinite alternate;
+}
+
+/* Animacijos */
+@keyframes aboutCircleAnim {
+  0%   { transform: scale(1) rotate(0deg) translateY(0);}
+  50%  { transform: scale(1.2) rotate(180deg) translateY(30px);}
+  100% { transform: scale(1) rotate(360deg) translateY(0);}
+}
+@keyframes aboutTriangleAnim {
+  0%   { transform: scale(1) rotate(0deg) translateY(0);}
+  40%  { transform: scale(1.15) rotate(120deg) translateY(-20px);}
+  100% { transform: scale(1) rotate(360deg) translateY(0);}
+}
+@keyframes aboutSquareAnim {
+  0%   { transform: scale(1) rotate(0deg) translateX(0);}
+  60%  { transform: scale(1.1) rotate(20deg) translateX(-40px);}
+  100% { transform: scale(1) rotate(-10deg) translateX(0);}
+}
+
+/* Responsive: mažesniuose ekranuose figūros mažesnės */
+@media (max-width: 768px) {
+  .shape-circle { width: 50px; height: 50px; }
+  .shape-triangle { border-left: 30px solid transparent; border-right: 30px solid transparent; border-bottom: 55px solid #1e2a78;}
+  .shape-square { width: 36px; height: 36px;}
+}
+
+/* Prefers-reduced-motion: išjungia animacijas */
+@media (prefers-reduced-motion: reduce) {
+  .about-shapes .shape {
+    animation: none !important;
+  }
+}
