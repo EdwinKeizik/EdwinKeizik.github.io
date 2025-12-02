@@ -782,3 +782,156 @@ ul.custom-list > li {
   opacity: 1;
   top: 56px;
 }
+
+/* --- Žaidimo Stiliai --- */
+
+#mano-zaidimas {
+    padding: 20px;
+    background-color: #23294d; /* Pakeiskite pagal savo CV svetainės spalvas */
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.controls label, .controls select, .controls button {
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.controls button {
+    cursor: pointer;
+    background-color: #007bff; /* Pakeiskite pagal pagrindinę spalvą */
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+/* Žaidimų lenta */
+#game-board {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #23294d;
+    align-items: center;
+}
+
+/* Tinklelio dydžiai pagal sudėtingumo lygį */
+#game-board.easy {
+    grid-template-columns: repeat(4, 1fr); /* 4x3 */
+    max-width: 440px; /* Pavyzdinis plotis */
+}
+
+#game-board.hard {
+    grid-template-columns: repeat(6, 1fr); /* 6x4 */
+    max-width: 660px; /* Pavyzdinis plotis */
+}
+
+/* Kortelė */
+.card {
+    position: relative;
+    width: 100px; /* Pakeiskite pagal pageidaujamą dydį */
+    height: 100px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Atversta kortelė */
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Neaktyvi/Sutapusi kortelė */
+.card.matched {
+    transform: rotateY(180deg);
+    border: #14532d 3px solid;
+}
+
+/* Kortelės pusės */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Kortelės nugara (paslėpta pusė) */
+.card-back {
+    background-color: #3498db; /* Kortelės nugaros spalva */
+    color: white;
+    transform: rotateY(0deg);
+    border: 3px solid #2980b9;
+}
+
+/* Kortelės priekis (turinys) */
+.card-front {
+    background-color: white;
+    color: #333;
+    transform: rotateY(180deg);
+    border: 3px solid #ccc;
+}
+
+/* Statistika */
+.stats-panel {
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #23294d;
+    width: 800px;
+    align-self: flex-start; /* Pradėti nuo viršaus */
+}
+
+.stats-panel h3, .stats-panel h4 {
+    margin-top: 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Laimėjimo pranešimas */
+#win-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.gamep{
+  background-color: #1e2a7840;
+}
+
+.game-area{
+  align-items: center;
+}

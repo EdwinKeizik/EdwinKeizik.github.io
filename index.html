@@ -51,6 +51,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#mano-zaidimas">Zaidimas</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -452,7 +453,7 @@
               </div>
               <h4>YouTube video</h4>
               <div style="aspect-ratio:16/9;">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BoUVIhtqjAw" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/BoUVIhtqjAw" title="YouTube video" allowfullscreen></iframe>
               </div>
               <p>Peržiūrėkite šį naudingą YouTube vaizdo įrašą apie programavimą ir karjerą IT srityje.</p>
             </div>
@@ -464,7 +465,7 @@
                 <i class="bi bi-camera-video"></i>
               </div>
               <h4>Demo video (MP4)</h4>
-              <video width="100%" controls>
+              <video controls>
                 <source src="assets/media/pexels.mp4" type="video/mp4">
                 Jūsų naršyklė nepalaiko video formato.
               </video>
@@ -526,8 +527,6 @@
         </div>
       </div>
     </div>
-    <!-- /Paslaugų lentelė -->
-      </div>
 
     </section><!-- /Services Section -->
 
@@ -675,12 +674,12 @@
     </section><!-- /Portfolio Section -->
 
 <section id="contact" class="contact section">
-  <div class="container section-title" data-aos="fade-up">
+  <div class="container section-title">
     <span class="subtitle">Kontaktai</span>
     <h2>Kontaktų forma</h2>
     <p>Susisiekite su manimi užpildydami žemiau esančią formą.</p>
   </div>
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container">
     <form id="contactForm" class="custom-contact-form">
       <div class="row gy-3">
         <div class="col-md-6">
@@ -706,17 +705,17 @@
         <div class="col-12 mt-3">
           <label class="form-label">Kaip vertinate mano svetainės dizainą? (1-10)</label>
           <input type="range" class="form-range" min="1" max="10" id="q1" name="q1" value="5" oninput="this.nextElementSibling.value = this.value">
-          <output>5</output>
+          <output for="q1">5</output>
         </div>
         <div class="col-12">
           <label class="form-label">Kaip vertinate turinio aiškumą? (1-10)</label>
           <input type="range" class="form-range" min="1" max="10" id="q2" name="q2" value="5" oninput="this.nextElementSibling.value = this.value">
-          <output>5</output>
+          <output for="q2">5</output>
         </div>
         <div class="col-12">
           <label class="form-label">Kaip vertinate bendrą įspūdį? (1-10)</label>
           <input type="range" class="form-range" min="1" max="10" id="q3" name="q3" value="5" oninput="this.nextElementSibling.value = this.value">
-          <output>5</output>
+          <output for="q3">5</output>
         </div>
         <div class="col-12 text-center mt-3">
           <button type="submit" class="btn btn-primary">Siųsti</button>
@@ -727,6 +726,44 @@
   </div>
 </section>
 
+<section id="mano-zaidimas">
+    <h2 class="section-title">Mano Žaidimas</h2>
+    
+    <div class="game-container">
+        <div class="controls">
+            <label for="difficulty-select">Pasirinkite sudėtingumo lygį:</label>
+            <select id="difficulty-select">
+                <option value="easy">Lengvas (4x3)</option>
+                <option value="hard">Sunkus (6x4)</option>
+            </select>
+            <button type="button" id="start-button">Startas</button>
+            <button type="button" id="reset-button">Atnaujinti</button>
+        </div>
+
+        <div class="game-area">
+            <div id="game-board" class="easy"></div>
+            
+            <div class="stats-panel">
+                <h3>Statistika</h3>
+                <p class="gamep">Ėjimai: <span id="moves-count">0</span></p>
+                <p class="gamep">Sutapusios poros: <span id="matched-pairs-count">0</span></p>
+                <p class="gamep">Laikas: <span id="timer">00:00</span></p>
+                
+                <hr>
+
+                <h4>Geriausias Rezultatas</h4>
+                <p class="gamep">Lengvas: <span id="best-easy">Nėra</span></p>
+                <p class="gamep">Sunkus: <span id="best-hard">Nėra</span></p>
+            </div>
+        </div>
+
+        <div id="win-message" class="hidden">
+            <h2>Laimėjote!</h2>
+        </div>
+    </div>
+</section>
+
+  <footer id="footer" class="footer">
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Craftivo</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
@@ -760,8 +797,4 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/custom.js"></script>
-
-</body>
-
-</html>
+  <script src="assets/js/custom.js"></script></main></body></html>
